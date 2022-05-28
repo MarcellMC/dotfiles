@@ -1,11 +1,12 @@
 --[[ opts.lua ]]
 local opt = vim.opt
+local cmd = vim.api.nvim_command
 
 -- [[ Context ]]
-opt.colorcolumn = '80'           -- str:  Show col for max line length
+opt.colorcolumn = '100'           -- str:  Show col for max line length
 opt.number = true                -- bool: Show line numbers
 opt.relativenumber = true        -- bool: Show relative line numbers
-opt.scrolloff = 4                -- int:  Min num lines of context
+opt.scrolloff = 8                -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
 
 -- [[ Filetypes ]]
@@ -15,6 +16,7 @@ opt.fileencoding = 'utf8'        -- str:  File encoding to use
 -- [[ Theme ]]
 opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
+cmd('colorscheme dracula')       -- cmd:  Set the colorscheme
 
 -- [[ Search ]]
 opt.ignorecase = true            -- bool: Ignore case in search patterns
