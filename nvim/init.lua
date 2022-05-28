@@ -14,3 +14,9 @@ require('plug')      -- Plugins
 
 -- PLUGINS
 require('nvim-tree').setup{}
+require('lualine').setup {
+  options = {
+    theme = 'dracula-nvim'
+  }
+}
+require('nvim-autopairs').setup{}
