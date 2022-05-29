@@ -1,10 +1,18 @@
 -- [[ plug.lua ]]
 
 return require('packer').startup(function()
-  -- [[ Plugins ]]
+  -- [[ Navigation ]]
+  use {
+        'nvim-treesitter/nvim-treesitter',           -- syntax tree builder
+        run = ':TSUpdate'
+  }
   use {                                              -- filesystem navigation
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'        -- filesystem icons
+  }
+  use {
+    'nvim-telescope/telescope.nvim',                 -- fuzzy finder
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- [[ Theme ]]
@@ -18,13 +26,15 @@ return require('packer').startup(function()
   use { 'Mofiqul/dracula.nvim' }
 
   -- [[ Dev ]]
-  use {
-    'nvim-telescope/telescope.nvim',                 -- fuzzy finder
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
   use { 'majutsushi/tagbar' }                        -- code structure
   use { 'Yggdroot/indentLine' }                      -- see indentation
   use { 'tpope/vim-fugitive' }                       -- git integration
   use { 'junegunn/gv.vim' }                          -- commit history
-  use { 'windwp/nvim-autopairs' }   
+  use { 'windwp/nvim-autopairs' }                    -- auto-insert pairing symbols
+  use { 'tpope/vim-commentary' }                     -- shortcuts for commenting code
+  use { 'tpope/vim-surround' }                       -- surround with ease
+  use { 'tpope/vim-repeat' }                         -- enhance vim's '.' (repeat last action)
+  use { 'tpope/vim-speeddating' }                    -- advanced dates
+  use { 'tpope/vim-eunuch' }                         -- sugar for the UNIX shell commands
+  use { 'godlygeek/tabular' }                        -- easy alignment
 end)
