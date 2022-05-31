@@ -37,4 +37,8 @@ return require('packer').startup(function()
   use { 'tpope/vim-speeddating' }                    -- advanced dates
   use { 'tpope/vim-eunuch' }                         -- sugar for the UNIX shell commands
   use { 'godlygeek/tabular' }                        -- easy alignment
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
