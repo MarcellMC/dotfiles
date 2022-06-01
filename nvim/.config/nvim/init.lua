@@ -13,7 +13,7 @@ require('opts')      -- Options
 require('keys')      -- Keymaps
 
 -- THEME
-vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]       -- cmd:  Set the colorscheme
 
 -- PLUGINS
