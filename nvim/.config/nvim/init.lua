@@ -12,12 +12,15 @@ require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
 
+-- THEME
+vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+vim.cmd[[colorscheme catppuccin]]       -- cmd:  Set the colorscheme
+
 -- PLUGINS
-vim.api.nvim_command('colorscheme dracula')       -- cmd:  Set the colorscheme
 require('nvim-tree').setup{}
 require('lualine').setup {
   options = {
-    theme = 'dracula-nvim'
+    theme = 'catppuccin'
   }
 }
 require('nvim-autopairs').setup{}

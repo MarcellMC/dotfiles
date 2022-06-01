@@ -32,7 +32,10 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons',
                 opt = true}
   }
-  use { 'Mofiqul/dracula.nvim' }
+  use {
+	"catppuccin/nvim",                               -- catpuccin theme
+	as = "catppuccin"
+  }
 
   -- [[ Dev ]]
   use { 'majutsushi/tagbar' }                        -- code structure
