@@ -15,7 +15,7 @@ map('n', '<C-Down>', ':resize -2<CR>', {})
 map('n', '<C-Left>', ':vertical resize -2<CR>', {})
 map('n', '<C-Right>', ':vertical resize +2<CR>', {})
 
-map('n', '<leader>e', [[:NvimTreeToggle<CR>]], {})
+map('n', '<leader>e', [[:NvimTreeFindFileToggle<CR>]], {})
 map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
 -- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
 
