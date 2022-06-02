@@ -28,4 +28,4 @@ map('n', '<leader>fh', [[:Telescope find_help<CR>]], {})
 -- map('n', '<leader>fm', [[:Telescope harpoon marks<CR>]], {})
 
 -- Fugitive
-map('n', '<leader>gs', ':Git<CR>', {})
+map('n', '<leader>gs', ':0Git<CR>', {})
