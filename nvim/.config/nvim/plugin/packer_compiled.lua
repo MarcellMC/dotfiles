@@ -74,10 +74,10 @@ _G.packer_plugins = {
     path = "/home/marcell/.local/share/nvim/site/pack/packer/start/beacon.nvim",
     url = "https://github.com/DanilaMihailov/beacon.nvim"
   },
-  ["dracula.nvim"] = {
+  catppuccin = {
     loaded = true,
-    path = "/home/marcell/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
+    path = "/home/marcell/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["gv.vim"] = {
     loaded = true,
@@ -98,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcell/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/marcell/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

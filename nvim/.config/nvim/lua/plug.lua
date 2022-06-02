@@ -15,6 +15,7 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',           -- syntax tree builder
         run = ':TSUpdate'
   }
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
   use {                                              -- filesystem navigation
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'        -- filesystem icons
