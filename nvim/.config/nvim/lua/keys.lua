@@ -29,3 +29,9 @@ map('n', '<leader>fh', [[:Telescope find_help<CR>]], {})
 
 -- Fugitive
 map('n', '<leader>gs', ':0Git<CR>', {})
+
+-- Theme
+map('n', '<leader>v1', ':Catppuccin mocha<cr>', {})
+map('n', '<leader>v2', ':Catppuccin macchiato<cr>', {})
+map('n', '<leader>v3', ':Catppuccin frappe<cr>', {})
+map('n', '<leader>v4', ':Catppuccin latte<cr>', {})
