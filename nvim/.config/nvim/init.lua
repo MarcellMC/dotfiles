@@ -17,8 +17,8 @@ vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]       -- cmd:  Set the colorscheme
 
 -- PLUGINS
-require'lspconfig'.solargraph.setup{}
-require('nvim-tree').setup{}
+-- require('nvim-lsp-installer').setup {}
+-- require('nvim-tree').setup{}
 require('lualine').setup {
   options = {
     theme = 'catppuccin'
