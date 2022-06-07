@@ -31,11 +31,8 @@ map('n', '<leader>fw', [[:lua require('telescope').extensions.git_worktree.creat
 -- Fugitive
 map('n', '<leader>gs', ':0Git<CR>', {})
 
-<<<<<<< HEAD
-=======
 -- Theme
 map('n', '<leader>v1', ':Catppuccin mocha<cr>', {})
 map('n', '<leader>v2', ':Catppuccin macchiato<cr>', {})
 map('n', '<leader>v3', ':Catppuccin frappe<cr>', {})
 map('n', '<leader>v4', ':Catppuccin latte<cr>', {})
->>>>>>> 87e50a13fed8925947481e53d16c04c038c2463e
