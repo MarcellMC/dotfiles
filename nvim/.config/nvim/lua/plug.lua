@@ -10,16 +10,48 @@ end
 return require('packer').startup(function()
   use { 'wbthomason/packer.nvim' }
 
-  -- [[ Navigation ]]
+  -- [[ TreeSitter ]]
   use {
         'nvim-treesitter/nvim-treesitter',           -- syntax tree builder
         run = ':TSUpdate'
   }
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+
+  -- [[ LSP ]]
+  use {
+    {
+        "williamboman/nvim-lsp-installer",
+        config = function()
+            require("nvim-lsp-installer").setup {}
+        end
+    },
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.sumneko_lua.setup {}
+            lspconfig.solargraph.setup {}
+        end
+    },
+}
+  -- use {
+  --   "williamboman/nvim-lsp-installer",
+  --   {
+  --       "neovim/nvim-lspconfig",
+  --       config = function()
+  --           require("nvim-lsp-installer").setup {}
+  --           local lspconfig = require("lspconfig")
+  --           lspconfig.sumneko_lua.setup {}
+  --       end
+  --   }
+-- }
+
+  -- [[ Tree ]]
   use {                                              -- filesystem navigation
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'        -- filesystem icons
   }
+
+  -- [[ Telescope ]]
   use {
     'nvim-telescope/telescope.nvim',                 -- fuzzy finder
     requires = { {'nvim-lua/plenary.nvim'} }
