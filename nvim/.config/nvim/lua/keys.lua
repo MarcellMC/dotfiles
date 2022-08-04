@@ -26,6 +26,7 @@ map('n', '<leader>fg', [[:Telescope live_grep<CR>]], {})
 map('n', '<leader>fb', [[:Telescope buffers<CR>]], {})
 map('n', '<leader>fh', [[:Telescope find_help<CR>]], {})
 -- map('n', '<leader>fm', [[:Telescope harpoon marks<CR>]], {})
+map('n', '<leader>fw', [[:lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>]], {})
 
 -- Fugitive
 map('n', '<leader>gs', ':0Git<CR>', {})

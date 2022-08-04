@@ -56,6 +56,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',                 -- fuzzy finder
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use { 'ThePrimeagen/git-worktree.nvim' }
 
   -- [[ Theme ]]
 --  use { 'mhinz/vim-startify' }                       -- start screen
