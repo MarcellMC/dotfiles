@@ -20,7 +20,7 @@ map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
 -- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
 
 -- Telescope
-map('n', '<leader>ff', [[:Telescope find_files<CR>]], {})
+map('n', '<leader>ff', [[:Telescope find_files hidden=true<CR>]], {})
 map('n', '<leader>fc', [[:Telescope current_buffer_fuzzy_find<CR>]], {})
 map('n', '<leader>fg', [[:Telescope live_grep<CR>]], {})
 map('n', '<leader>fb', [[:Telescope buffers<CR>]], {})
