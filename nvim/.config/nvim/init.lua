@@ -14,10 +14,6 @@ require('keys')      -- Keymaps
 require('user.telescope')
 require('user.lsp')
 
--- THEME
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-vim.cmd[[colorscheme catppuccin]]       -- cmd:  Set the colorscheme
-
 -- PLUGINS
 -- require('nvim-lsp-installer').setup {}
 require('nvim-tree').setup{}

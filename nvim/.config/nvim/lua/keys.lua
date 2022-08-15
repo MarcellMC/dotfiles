@@ -1,5 +1,6 @@
 --[[ keys.lua ]]
 local map = vim.api.nvim_set_keymap
+local nnoremap = require("keyset").nnoremap
 
 -- remap the key used to leave insert mode
 -- map('i', 'jk', '<ESC>', {})
@@ -8,6 +9,7 @@ local map = vim.api.nvim_set_keymap
 map('n', '<leader>ve', [[:edit $MYVIMRC<CR>]], {})
 map('n', '<leader>vr', [[:source $MYVIMRC<CR>]], {})
 map('n', '<leader>vi', [[:source $MYVIMRC<CR> :PackerInstall<CR>]], {})
+nnoremap('<leader>vs', '<CMD>PackerSync<CR>')
 
 -- Resize windows with Ctrl-Arrows
 map('n', '<C-Up>', ':resize +2<CR>', {})
@@ -18,6 +20,15 @@ map('n', '<C-Right>', ':vertical resize +2<CR>', {})
 map('n', '<leader>e', [[:NvimTreeFindFileToggle<CR>]], {})
 map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
 -- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
+
+-- LSP
+nnoremap('<leader>h', vim.lsp.buf.hover, {buffer=0})
+nnoremap('<leader>gd', vim.lsp.buf.definition, {buffer=0})
+nnoremap('<leader>ne', vim.diagnostic.goto_next, {buffer=0})
+nnoremap('<leader>pe', vim.diagnostic.goto_prev, {buffer=0})
+nnoremap('<leader>r', vim.lsp.buf.rename, {buffer=0})
+nnoremap('<leader>ca', vim.lsp.buf.code_action, {buffer=0})
+nnoremap('<leader>fe', '<CMD>Telescope diagnostics<CR>', {buffer=0})
 
 -- Telescope
 map('n', '<leader>ff', [[:Telescope find_files hidden=true<CR>]], {})
