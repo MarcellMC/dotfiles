@@ -22,7 +22,6 @@ map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
 -- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
 
 -- LSP
-
 -- hover
 nnoremap('<F1>', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 nnoremap('K', vim.lsp.buf.hover, {buffer=0})
