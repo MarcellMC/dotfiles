@@ -14,11 +14,24 @@
 return require('packer').startup(function(use)
     use ( 'wbthomason/packer.nvim' )
 
+    -- [[ Which Key ]]
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+
     -- [[ TreeSitter ]]
     use {
         'nvim-treesitter/nvim-treesitter',           -- syntax tree builder
         run = ':TSUpdate'
     }
+    -- use 'nvim-treesitter/playground'
 
     -- [[ LSP ]]
     use {
@@ -26,6 +39,18 @@ return require('packer').startup(function(use)
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
+
+    use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga({
+            -- your configuration
+        })
+    end,
+})
 
     -- [[ Completion ]]
     use {
