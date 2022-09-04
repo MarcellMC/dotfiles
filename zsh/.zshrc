@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="~/bin/nvim.appimage"
+alias nvim="~/bin/nvim.appimage"
 alias tx="tmuxinator"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
