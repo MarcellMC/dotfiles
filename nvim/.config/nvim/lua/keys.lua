@@ -27,8 +27,8 @@ nnoremap('<F1>', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 nnoremap('K', vim.lsp.buf.hover, {buffer=0})
 
 -- definitions, declarations, implementations
-nnoremap('gd', [[:lua require'vim.lsp.buf'.definition()<CR>]], {buffer=0})
-nnoremap('gr', [[:lua require'vim.lsp.buf'.references()<CR>]], {buffer=0})
+nnoremap('gd', [[:lua require'vim.lsp.buf'.definition()<CR>]], { silent = true })
+nnoremap('gr', [[:lua require'vim.lsp.buf'.references()<CR>]], { silent = true })
 nnoremap('<leader>cpd', '<cmd>Lspsaga preview_definition<CR>', { silent = true })
 
 -- diagnostics
