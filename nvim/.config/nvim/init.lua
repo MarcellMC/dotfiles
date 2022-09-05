@@ -11,6 +11,7 @@ require('plug')      -- Plugins
 require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
+require('annotated_keys')
 require('user.telescope')
 require('user.lsp')
 
