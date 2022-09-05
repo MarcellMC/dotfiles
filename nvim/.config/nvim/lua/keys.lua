@@ -49,7 +49,7 @@ nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
 -- vnoremap('v', '<leader>ca', '<cmd><C-U>Lspsaga range_code_action<CR>', { silent = true })
 
 
-nnoremap('<leader>cf>', '<cmd>Lspsaga lsp_finder<CR>')
+nnoremap('<leader>cf', '<cmd>Lspsaga lsp_finder<CR>')
 nnoremap('<leader>co', '<cmd>LSoutlineToggle<CR>',{ silent = true })
 
 -- local action = require("lspsaga.action")
