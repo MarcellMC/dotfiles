@@ -22,6 +22,11 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- [[ UndoTree ]]
+    use {
+        'mbbill/undotree'
+    }
+
     -- [[ TreeSitter ]]
     use {
         'nvim-treesitter/nvim-treesitter',           -- syntax tree builder

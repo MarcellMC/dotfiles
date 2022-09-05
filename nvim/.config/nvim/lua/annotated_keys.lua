@@ -9,6 +9,13 @@ local mappings = {
                 '<cmd>Lspsaga rename<CR>',
                 'Rename Tag'
             }
+    },
+    v = {
+        name = 'Vim',
+        u = {
+            '<cmd>UndotreeToggle<CR>',
+            'Toggle Undo Tree'
+        }
     }
 }
 
