@@ -15,12 +15,3 @@ require('annotated_keys')
 require('user.telescope')
 require('user.lsp')
 
--- PLUGINS
--- require('nvim-lsp-installer').setup {}
-require('nvim-tree').setup{}
-require('lualine').setup {
-  options = {
-    theme = 'catppuccin'
-  }
-}
-require('nvim-autopairs').setup{}
