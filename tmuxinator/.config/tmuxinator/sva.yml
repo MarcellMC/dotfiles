@@ -1,6 +1,6 @@
 # /home/marcellmc/.config/tmuxinator/sva.yml
 
-name: sva
+name: SAT Vendors API
 root: ~/dev/sat-vendors-api
 
 # Optional tmux socket
@@ -33,7 +33,7 @@ root: ~/dev/sat-vendors-api
 # tmux_options: -f ~/.tmux.mac.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-tmux_command: byobu
+# tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: editor
@@ -52,6 +52,4 @@ windows:
       # synchronize: after
       panes:
         - vim
-        # - guard
   # - server: docker exec -it sat-vendors-api_web
-  # - logs: tail -f log/development.log
