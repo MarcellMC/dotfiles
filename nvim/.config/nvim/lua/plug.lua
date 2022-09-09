@@ -1,16 +1,5 @@
 -- [[ plug.lua ]]
 
--- PACKER
--- local fn = vim.fn
--- local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
--- if fn.empty(fn.glob(install_path)) > 0 then
---     packer_bootstrap = fn.system({'git',
---     'clone', '--depth',
---     '1',
---     'https://github.com/wbthomason/packer.nvim',
---     install_path})
--- end
-
 return require('packer').startup(function(use)
     use ( 'wbthomason/packer.nvim' )
 
@@ -87,10 +76,13 @@ return require('packer').startup(function(use)
         as = "catppuccin"
     }
 
+    -- [[ Git ]]
+    use { 'tpope/vim-fugitive' }                       -- git integration
+    use { 'idanarye/vim-merginal' }                       -- git integration
+
     -- [[ Dev ]]
     use { 'majutsushi/tagbar' }                        -- code structure
     use { 'Yggdroot/indentLine' }                      -- see indentation
-    use { 'tpope/vim-fugitive' }                       -- git integration
     use { 'junegunn/gv.vim' }                          -- commit history
     use { 'windwp/nvim-autopairs' }                    -- auto-insert pairing symbols
     use { 'tpope/vim-commentary' }                     -- shortcuts for commenting code
@@ -99,8 +91,4 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-speeddating' }                    -- advanced dates
     use { 'tpope/vim-eunuch' }                         -- sugar for the UNIX shell commands
     use { 'godlygeek/tabular' }                        -- easy alignment
-
-    -- if packer_bootstrap then
-    --     require('packer').sync()
-    -- end
 end)
