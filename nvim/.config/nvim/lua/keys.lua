@@ -17,8 +17,8 @@ map('n', '<C-Down>', ':resize -2<CR>', {})
 map('n', '<C-Left>', ':vertical resize -2<CR>', {})
 map('n', '<C-Right>', ':vertical resize +2<CR>', {})
 
-map('n', '<leader>e', [[:NvimTreeFindFileToggle<CR>]], {})
-map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
+-- map('n', '<leader>e', [[:NvimTreeFindFileToggle<CR>]], {})
+-- map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
 -- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
 
 -- LSP
@@ -50,7 +50,7 @@ nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
 
 
 nnoremap('<leader>cf', '<cmd>Lspsaga lsp_finder<CR>')
-nnoremap('<leader>co', '<cmd>LSoutlineToggle<CR>',{ silent = true })
+-- nnoremap('<leader>co', '<cmd>LSoutlineToggle<CR>',{ silent = true })
 
 -- local action = require("lspsaga.action")
 -- -- scroll in hover doc or  definition preview window
@@ -73,7 +73,7 @@ map('n', '<leader>fw', [[:lua require('telescope').extensions.git_worktree.creat
 nnoremap('<leader>fe', '<cmd>Telescope diagnostics<CR>', {buffer=0})
 
 -- Fugitive
-map('n', '<leader>gs', ':0Git<CR>', {})
+-- map('n', '<leader>gs', ':0Git<CR>', {})
 
 -- Theme
 map('n', '<leader>v1', ':Catppuccin mocha<cr>', {})
