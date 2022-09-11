@@ -13,7 +13,7 @@ local mappings = {
     g = {
         name = 'Git',
         c = {
-            '<cmd>Gwrite<cr>',
+            '<cmd>G commit<cr>',
             'Commit'
         },
         p = {
@@ -51,7 +51,7 @@ local mappings = {
         },
         o = {
             '<cmd>LSoutlineToggle<CR>',
-            'Indent Lines'
+            'Language Server Outline'
         },
         u = {
             '<cmd>UndotreeToggle<CR>',
