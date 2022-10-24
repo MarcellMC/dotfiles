@@ -51,5 +51,5 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - vim
+        - vim ~/dev/sat-vendors-api
   # - server: docker exec -it sat-vendors-api_web
