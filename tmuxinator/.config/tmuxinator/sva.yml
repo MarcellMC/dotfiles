@@ -49,6 +49,6 @@ windows:
       layout: main-vertical
       panes:
         - vim
-  - server: docker exec -it sat-vendors-api_web
+  - server: docker-compose up
   - terminal:
         - zsh
