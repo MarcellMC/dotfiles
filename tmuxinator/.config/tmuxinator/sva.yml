@@ -1,7 +1,7 @@
 # /home/marcellmc/.config/tmuxinator/sva.yml
 
 name: SAT Vendors API
-root: ~/dev/save-a-train/sat-vendors-api
+root: ~/dev/SAT/sat-vendors-api
 
 # Optional tmux socket
 # socket_name: foo
@@ -47,11 +47,8 @@ root: ~/dev/save-a-train/sat-vendors-api
 windows:
   - editor:
       layout: main-vertical
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
       panes:
         - vim
-  # - server: docker exec -it sat-vendors-api_web
-    - terminal:
+  - server: docker exec -it sat-vendors-api_web
+  - terminal:
         - zsh
