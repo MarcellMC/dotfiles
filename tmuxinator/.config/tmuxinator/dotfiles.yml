@@ -1,7 +1,7 @@
-# /home/marcellmc/.config/tmuxinator/sva.yml
+# /home/marcell/.config/tmuxinator/dotfiles.yml
 
-name: SAT Vendors API
-root: ~/dev/SAT/sat-vendors-api
+name: dotfiles
+root: ~/dotfiles
 
 # Optional tmux socket
 # socket_name: foo
@@ -49,6 +49,4 @@ windows:
       layout: main-vertical
       panes:
         - vim
-  - server: docker exec -it sat-vendors-api_web
-  - terminal:
-        - zsh
+  - terminal: zsh
