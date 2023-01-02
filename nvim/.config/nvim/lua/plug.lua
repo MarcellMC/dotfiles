@@ -79,6 +79,7 @@ return require('packer').startup(function(use)
     -- [[ Git ]]
     use { 'tpope/vim-fugitive' }                       -- git integration
     use { 'idanarye/vim-merginal' }                       -- git integration
+    use { 'rbong/vim-flog' }                           -- git branch viewer
 
     -- [[ Dev ]]
     use { 'majutsushi/tagbar' }                        -- code structure
