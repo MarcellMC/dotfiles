@@ -61,7 +61,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',                 -- fuzzy finder
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use { 'ThePrimeagen/git-worktree.nvim' }
 
     -- [[ Theme ]]
     use { 'mhinz/vim-startify' }                       -- start screen
@@ -80,6 +79,7 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-fugitive' }                       -- git integration
     use { 'idanarye/vim-merginal' }                       -- git integration
     use { 'rbong/vim-flog' }                           -- git branch viewer
+    use { 'ThePrimeagen/git-worktree.nvim' }           -- git worktree integration
 
     -- [[ Dev ]]
     use { 'majutsushi/tagbar' }                        -- code structure
