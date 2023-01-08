@@ -14,4 +14,5 @@ require('keys')      -- Keymaps
 require('annotated_keys')
 require('user.telescope')
 require('user.lsp')
+require('user.worktree')
 

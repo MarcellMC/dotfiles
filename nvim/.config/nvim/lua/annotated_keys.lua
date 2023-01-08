@@ -34,6 +34,17 @@ local mappings = {
             '<cmd>tabe | 0Git<CR>',
             'Status in a New Tab'
         },
+        t = {
+            name = 'Worktree',
+            l = {
+                "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>",
+                'List Branches'
+            },
+            a = {
+                "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>",
+                'Add Worktree'
+            }
+        },
         w = {
             '<cmd>Gwrite<cr>',
             'Write to Git Index/Worktree'
