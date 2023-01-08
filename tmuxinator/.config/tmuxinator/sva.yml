@@ -1,7 +1,7 @@
 # /home/marcellmc/.config/tmuxinator/sva.yml
 
 name: SAT Vendors API
-root: ~/dev/SAT/sat-vendors-api
+root: ~/dev/SAT/sat-vendor-api
 
 # Optional tmux socket
 # socket_name: foo
