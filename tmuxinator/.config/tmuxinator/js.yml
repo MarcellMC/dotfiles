@@ -52,4 +52,4 @@ windows:
       # synchronize: after
       panes:
         - vim .
-  - terminal: zsh .
+  - terminal: zsh
