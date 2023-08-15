@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
     url = "https://github.com/ThePrimeagen/git-worktree.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gv.vim"] = {
     loaded = true,
     path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/gv.vim",
@@ -113,12 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
-  },
-  ["lspsaga.nvim"] = {
-    config = { "\27LJ\2\nA\0\0\4\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\1\2\0004\3\0\0B\1\2\1K\0\1\0\18init_lsp_saga\flspsaga\frequire\0" },
-    loaded = true,
-    path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -164,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/home/marcellmc/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -253,10 +257,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
--- Config for: lspsaga.nvim
-time([[Config for lspsaga.nvim]], true)
-try_loadstring("\27LJ\2\nA\0\0\4\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\1\2\0004\3\0\0B\1\2\1K\0\1\0\18init_lsp_saga\flspsaga\frequire\0", "config", "lspsaga.nvim")
-time([[Config for lspsaga.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

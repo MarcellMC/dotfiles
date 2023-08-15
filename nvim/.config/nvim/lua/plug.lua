@@ -30,18 +30,6 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
-    use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-        local saga = require("lspsaga")
-
-        saga.init_lsp_saga({
-            -- your configuration
-        })
-    end,
-})
-
     -- [[ Completion ]]
     use {
         'hrsh7th/nvim-cmp',
@@ -96,4 +84,7 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-speeddating' }                    -- advanced dates
     use { 'tpope/vim-eunuch' }                         -- sugar for the UNIX shell commands
     use { 'godlygeek/tabular' }                        -- easy alignment
+
+    -- [[ Markdown ]]
+    use { 'epwalsh/obsidian.nvim' }
 end)
