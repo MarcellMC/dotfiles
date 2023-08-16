@@ -30,18 +30,6 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
-    use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-        local saga = require("lspsaga")
-
-        saga.init_lsp_saga({
-            -- your configuration
-        })
-    end,
-})
-
     -- [[ Completion ]]
     use {
         'hrsh7th/nvim-cmp',
@@ -80,6 +68,10 @@ return require('packer').startup(function(use)
     use { 'idanarye/vim-merginal' }                       -- git integration
     use { 'rbong/vim-flog' }                           -- git branch viewer
     use { 'ThePrimeagen/git-worktree.nvim' }           -- git worktree integration
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    }
 
     -- [[ Dev ]]
     use { 'majutsushi/tagbar' }                        -- code structure
@@ -92,4 +84,7 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-speeddating' }                    -- advanced dates
     use { 'tpope/vim-eunuch' }                         -- sugar for the UNIX shell commands
     use { 'godlygeek/tabular' }                        -- easy alignment
+
+    -- [[ Markdown ]]
+    use { 'epwalsh/obsidian.nvim' }
 end)
