@@ -1,4 +1,5 @@
 {
+  "activate.nvim": { "branch": "main", "commit": "66b13122e5862ad9f3e055649cc5e7478744f6a6" },
   "beacon.nvim": { "branch": "master", "commit": "a786c9a89b2c739c69f9500a2f70f2586c06ec27" },
   "catppuccin": { "branch": "main", "commit": "3d9a5ed556e289bce6c1fb0af89ec838360641b2" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },

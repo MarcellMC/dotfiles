@@ -1,6 +1,16 @@
--- [[ plug.lua ]]
-
 return require('lazy').setup({
+    -- [[Plugin Management]]
+    {
+      "roobert/activate.nvim",
+      keys = {
+        {
+          "<leader>vp",
+          '<CMD>lua require("activate").list_plugins()<CR>',
+          desc = "Plugins",
+        },
+      }
+    },
+
     -- [[ Which Key ]]
         "folke/which-key.nvim",
 

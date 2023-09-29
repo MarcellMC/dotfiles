@@ -20,7 +20,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- IMPORTS
-require('plug')      -- Plugins
+require('plugins')      -- Plugins
 require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
@@ -30,4 +30,3 @@ require('user.lsp')
 require('user.worktree')
 -- require('user.lewis6991.gitsigns')
 
-require("lazy").setup(plug)
