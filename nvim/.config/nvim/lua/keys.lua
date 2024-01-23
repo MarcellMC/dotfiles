@@ -2,13 +2,9 @@
 local map = vim.api.nvim_set_keymap
 local nnoremap = require("keyset").nnoremap
 
--- remap the key used to leave insert mode
--- map('i', 'jk', '<ESC>', {})
-
 -- Vim Config
 map('n', '<leader>ve', [[:edit $MYVIMRC<CR>]], {})
 map('n', '<leader>vr', [[:source $MYVIMRC<CR>]], {})
-map('n', '<leader>vi', [[:source $MYVIMRC<CR> :PackerInstall<CR>]], {})
 nnoremap('<leader>vs', '<cmd>luafile %<CR>')
 
 -- Resize windows with Ctrl-Arrows
@@ -17,39 +13,35 @@ map('n', '<C-Down>', ':resize -2<CR>', {})
 map('n', '<C-Left>', ':vertical resize -2<CR>', {})
 map('n', '<C-Right>', ':vertical resize +2<CR>', {})
 
--- map('n', '<leader>e', [[:NvimTreeFindFileToggle<CR>]], {})
--- map('n', '<leader>l', [[:IndentLinesToggle<CR>]], {})
--- map('n', '<leader>t', [[:TagbarToggle<CR>]], {})
-
 -- LSP
 -- hover
-nnoremap('<F1>', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
+-- nnoremap('<F1>', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 nnoremap('K', vim.lsp.buf.hover, {buffer=0})
 
 -- definitions, declarations, implementations
 nnoremap('gd', [[:lua require'vim.lsp.buf'.definition()<CR>]], { silent = true })
 nnoremap('gr', [[:lua require'vim.lsp.buf'.references()<CR>]], { silent = true })
-nnoremap('<leader>cpd', '<cmd>Lspsaga preview_definition<CR>', { silent = true })
+-- nnoremap('<leader>cpd', '<cmd>Lspsaga preview_definition<CR>', { silent = true })
 
 -- diagnostics
 nnoremap('[D', vim.diagnostic.goto_next, {buffer=0})
 nnoremap(']D', vim.diagnostic.goto_prev, {buffer=0})
-nnoremap('[d', '<cmd>Lspsaga diagnostic_jump_next<CR>', { silent = true })
-nnoremap(']d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { silent = true })
-nnoremap('<leader>cld>', '<cmd>Lspsaga show_line_diagnostics<CR>', { silent = true })
-nnoremap('<leader>ccd>', '<cmd>Lspsaga show_cursor_diagnostics<CR>', { silent = true })
+-- nnoremap('[d', '<cmd>Lspsaga diagnostic_jump_next<CR>', { silent = true })
+-- nnoremap(']d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { silent = true })
+-- nnoremap('<leader>cld>', '<cmd>Lspsaga show_line_diagnostics<CR>', { silent = true })
+-- nnoremap('<leader>ccd>', '<cmd>Lspsaga show_cursor_diagnostics<CR>', { silent = true })
 
 -- rename
 nnoremap('<leader>cr', vim.lsp.buf.rename, {buffer=0})
-nnoremap('<F2>', '<cmd>Lspsaga rename<CR>', { silent = true })
+-- nnoremap('<F2>', '<cmd>Lspsaga rename<CR>', { silent = true })
 
 -- code actions
 -- nnoremap('<leader>ca', vim.lsp.buf.code_action, {buffer=0})
-nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
+-- nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
 -- vnoremap('v', '<leader>ca', '<cmd><C-U>Lspsaga range_code_action<CR>', { silent = true })
 
 
-nnoremap('<leader>cf', '<cmd>Lspsaga lsp_finder<CR>')
+-- nnoremap('<leader>cf', '<cmd>Lspsaga lsp_finder<CR>')
 -- nnoremap('<leader>co', '<cmd>LSoutlineToggle<CR>',{ silent = true })
 
 -- local action = require("lspsaga.action")

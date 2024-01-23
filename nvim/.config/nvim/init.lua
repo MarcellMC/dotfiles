@@ -25,8 +25,8 @@ require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
 require('annotated_keys')
-require('user.telescope')
-require('user.lsp')
-require('user.worktree')
+--require('user.telescope')
+-- require('user.lsp')
+-- require('user.worktree')
 -- require('user.lewis6991.gitsigns')
 
