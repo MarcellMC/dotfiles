@@ -20,7 +20,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- IMPORTS
-require('plugins')      -- Plugins
+-- require('plugins')      -- Plugins
+require("lazy").setup("plugins")
+-- require("oil").setup()
 require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
