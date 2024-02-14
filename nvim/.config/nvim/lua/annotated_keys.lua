@@ -50,6 +50,13 @@ local mappings = {
             'Write to Git Index/Worktree'
         },
     },
+    e = {
+        name = 'Explore',
+        f = {
+            '<cmd>Oil<cr>',
+            'File System'
+        },
+    },
     t = {
         name = 'Toggle',
         f = {

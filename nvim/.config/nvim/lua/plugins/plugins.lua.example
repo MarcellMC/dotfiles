@@ -60,7 +60,7 @@ return require(lazy).setup({})
 --    },
 
     -- [[ Git ]]
-    'tpope/vim-fugitive',                       -- git integration
+--    'tpope/vim-fugitive',                       -- git integration
     'idanarye/vim-merginal',                       -- git integration
     'rbong/vim-flog',                           -- git branch viewer
     'ThePrimeagen/git-worktree.nvim',           -- git worktree integration
@@ -74,8 +74,8 @@ return require(lazy).setup({})
 --    'Yggdroot/indentLine',                      -- see indentation
     'junegunn/gv.vim',                          -- commit history
 --    'windwp/nvim-autopairs',                    -- auto-insert pairing symbols
-    'tpope/vim-commentary',                     -- shortcuts for commenting code
-    'tpope/vim-surround',                       -- surround with ease
+--    'tpope/vim-commentary',                     -- shortcuts for commenting code
+--    'tpope/vim-surround',                       -- surround with ease
     'tpope/vim-repeat',                         -- enhance vim's '.' (repeat last action)
     'tpope/vim-speeddating',                    -- advanced dates
     'tpope/vim-eunuch',                         -- sugar for the UNIX shell commands
