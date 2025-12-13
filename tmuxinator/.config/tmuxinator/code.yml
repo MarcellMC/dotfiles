@@ -1,6 +1,6 @@
-# /home/$(whoami)/.config/tmuxinator/js.yml
+# /home/$(whoami)/.config/tmuxinator/code.yml
 
-name: js
+name: code
 root: ~/dev/
 
 # Optional tmux socket
