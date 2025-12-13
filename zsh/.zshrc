@@ -109,15 +109,31 @@ export XDG_CONFIG_HOME=/home/$(whoami)/.config/
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="~/bin/nvim.appimage"
-alias nvim="~/bin/nvim.appimage"
+# alias vim="~/bin/nvim.appimage"
+alias vim="/usr/bin/nvim"
+# alias nvim="~/bin/nvim.appimage"
+# Add Ruby gems to PATH
+export PATH="$HOME/.gem/ruby/$(ruby -e 'puts RUBY_VERSION')/bin:$PATH"
 alias tx="tmuxinator"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Auto-mount Google Drive if not already mounted
+if [ ! -d "$HOME/gdrive" ]; then
+    mkdir -p "$HOME/gdrive"
+fi
+
+if ! mountpoint -q "$HOME/gdrive" 2>/dev/null; then
+    rclone mount mcl-drive: ~/gdrive --daemon 2>/dev/null
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export EDITOR="vim"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.local/bin:$PATH"

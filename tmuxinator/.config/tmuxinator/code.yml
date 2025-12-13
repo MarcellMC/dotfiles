@@ -1,5 +1,7 @@
-name: NeoVim Config
-root: ./.config/nvim/
+# /home/$(whoami)/.config/tmuxinator/js.yml
+
+name: js
+root: ~/dev/
 
 # Optional tmux socket
 # socket_name: foo
@@ -50,4 +52,5 @@ windows:
       # synchronize: after
       panes:
         - vim .
+        - claude
   - terminal: zsh
