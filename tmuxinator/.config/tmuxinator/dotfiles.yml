@@ -49,4 +49,6 @@ windows:
       layout: main-vertical
       panes:
         - vim .
+        - claude
+  - lazygit: lazygit
   - terminal: zsh

@@ -52,6 +52,7 @@ windows:
       # synchronize: after
       panes:
         - vim .
+  - lazyvim: nvim .
   - terminal:
       layout: main-vertical
       panes:
