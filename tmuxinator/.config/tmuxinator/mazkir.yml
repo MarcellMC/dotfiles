@@ -1,7 +1,7 @@
 # /home/marcellmc/.config/tmuxinator/mazkir.yml
 
 name: mazkir
-root: ~/dev/tg-mazkir/
+root: ~/dev/mazkir/
 
 # Optional tmux socket
 # socket_name: foo
@@ -53,5 +53,9 @@ windows:
       panes:
         - vim .
         - claude
+  - servers:
+      layout: main-vertical
+      panes:
+        - cd ~/dev/mazkir/apps/vault-server && source venv/bin/activate && python -m uvicorn src.main:app --reload --port 8000
+        - cd ~/dev/mazkir/apps/telegram-py-client && source venv/bin/activate && python -m src.main
   - lazygit: lazygit
-  - terminal: zsh

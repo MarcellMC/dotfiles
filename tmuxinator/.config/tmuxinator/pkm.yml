@@ -1,7 +1,7 @@
 # /home/marcellmc/.config/tmuxinator/notes.yml
 
-name: notes
-root: ~/dev/Notes/Personal
+name: pkm
+root: ~/pkm/
 
 # Optional tmux socket
 # socket_name: foo
@@ -51,8 +51,9 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - vim .
-  - lazyvim: nvim .
+        - nvim .
+  - claude: claude
+  - lazygit: lazygit
   - terminal:
       layout: main-vertical
       panes:
