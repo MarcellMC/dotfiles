@@ -45,10 +45,10 @@ root: ~/dotfiles
 # attach: false
 
 windows:
-  - editor:
+  - source:
       layout: main-vertical
       panes:
         - vim .
-        - claude
-  - lazygit: lazygit
+        - claude --model="sonnet"
   - terminal: zsh
+  - lazygit: lazygit
