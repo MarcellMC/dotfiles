@@ -116,6 +116,20 @@ alias vim="/usr/bin/nvim"
 export PATH="$HOME/.gem/ruby/$(ruby -e 'puts RUBY_VERSION')/bin:$PATH"
 alias tx="tmuxinator"
 
+function hint() {
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: hint <question>"
+    return 1
+  fi
+  local question="$*"
+  curl -s https://api.anthropic.com/v1/messages \
+    -H "Content-Type: application/json" \
+    -H "x-api-key: $ANTHROPIC_API_KEY" \
+    -H "anthropic-version: 2023-06-01" \
+    -d "{\"model\":\"claude-haiku-4-5\",\"max_tokens\":1024,\"messages\":[{\"role\":\"user\",\"content\":$(echo "$question" | jq -Rs .)}]}" \
+    | jq -r '.content[0].text'
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
