@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -z $(hyprctl workspaces | grep special:magic) ]]; then
-    hyprctl dispatch movetoworkspacesilent special:magic
+    hyprctl dispatch 'hl.dsp.window.move({workspace = "special:magic", follow = false})'
 else
-    hyprctl --batch 'dispatch togglespecialworkspace magic;dispatch movetoworkspace +0'
+    hyprctl --batch 'dispatch hl.dsp.workspace.toggle_special("magic");dispatch hl.dsp.window.move({workspace = "+0"})'
 fi
