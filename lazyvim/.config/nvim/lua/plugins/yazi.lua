@@ -1,7 +1,9 @@
 return {
   "mikavilpas/yazi.nvim",
   version = "*",
-  event = "VeryLazy",
+  -- must load at startup (not lazily) so `open_for_directories` reliably
+  -- hijacks `nvim .` before anything else claims the directory buffer
+  lazy = false,
   dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
   },
