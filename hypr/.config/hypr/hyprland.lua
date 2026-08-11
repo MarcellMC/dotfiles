@@ -224,7 +224,7 @@ hl.bind(mainMod .. " + V",      hl.dsp.exec_cmd("cliphist list | rofi -dmenu | c
 
 hl.bind(mainMod .. " + Space",       hl.dsp.exec_cmd("hyprctl switchxkblayout all next"), { locked = true }) -- Layout switch (works on lock screen too)
 hl.bind(mainMod .. " + SHIFT + R",   hl.dsp.exec_cmd("hyprctl reload"))                                      -- Reload Hyprland configuration
-hl.bind(mainMod .. " + BackSpace",   hl.dsp.exec_cmd("sleep 0.5 && hyprctl dispatch dpms off"))               -- Super+Backspace to turn off monitor
+hl.bind(mainMod .. " + BackSpace",   hl.dsp.exec_cmd("sleep 0.5 && hyprctl dispatch 'hl.dsp.dpms(\"off\")'")) -- Super+Backspace to turn off monitor
 hl.bind(mainMod .. " + SHIFT + BackSpace", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))                    -- Super+Shift+Backspace to lock
 
 -- Window management
@@ -248,8 +248,8 @@ hl.bind(mainMod .. " + ALT + L", hl.dsp.layout("preselect r")) -- Next window go
 -- Layout management
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())              -- Dwindle pseudotiling
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))        -- Dwindle toggle split direction
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprctl keyword general:layout dwindle"))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("hyprctl keyword general:layout master"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprctl eval 'hl.config({general = {layout = \"dwindle\"}})'"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("hyprctl eval 'hl.config({general = {layout = \"master\"}})'"))
 
 --------------------
 ---- NAVIGATION ----
